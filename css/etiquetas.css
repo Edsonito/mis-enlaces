@@ -79,6 +79,7 @@
         border-radius: 3px;
     }
 
+
 .info_importante{
     background-color: var(--seleccion);
     font-style: italic;
@@ -104,25 +105,13 @@
     padding: 0px 5px 2px 5px;
     border-radius: 3px;
 }
-
-
-
-/*
-.actualizado::after{
-    content: "actualizado";
-    font-size:smaller;
-    font-weight: bold;
-    background-color: var(--principal);
-    color:var(--texto_claro);
-    margin: 3px;
-    padding: 0px 5px;
-    border-radius: 5px;
-    }
-/*
-.info_importante{
-    background-color: var(--seleccion);
-    color: var(--principal);
-    text-align:left;
-    font-size: small;
-    }
-*/
+.exclusivo:hover::after{
+    content: "acceso restringido";
+    /*font-size: smaller;*/
+    color: var(--texto_oscuro);
+    background-color: var(--texto_claro);
+    box-shadow: var(--texto_oscuro) 1px 1px 3px;
+    margin: 0px 10px;
+    padding: 0px 5px 2px 5px;
+    border-radius: 3px;
+}
