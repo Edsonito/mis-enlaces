@@ -1,117 +1,48 @@
 :root{
-    --fondo: #F0E6E4;
-    --principal: #1B2E55;
-    --seleccion: #FDF5CA;
-    --texto_claro:#F7F8FA;
-    --texto_oscuro:#192123;
+    --fondo:#F5F5F5;
+    --principal: #19314b; /*SPACE CADET*/
+    --secundario: #2D4B6F; /*POLICE BLUE*/
+    --acento: #F1D198; /*CARAMEL*/
+    --texto_oscuro: #333;
+    --texto_claro:#fff;
+    --sombra: #59595955; /*DAVY'S GREY*/
+    --radio: 0.5rem;
 }
-.titulo{
-    background-color: transparent;
-    font-family: 'Bitter', 'Times New Roman', Times, serif;
-    font-size: 2rem;
-    color: var(--principal);
-    border: none;
-}
-.eslogan{
-    background-color: transparent;
-    font-family: 'Bitter', 'Times New Roman', Times, serif;
-    font-size: 1.2rem;
-    font-style: italic;
-    color: var(--texto_oscuro);
-    position: relative;
-    top: -5px;
-    left: 10px;
-    border: none;
-    margin: 0px;
-}
-
-.navegacion{
-    background-color: transparent;
-    color: var(--texto_claro);
-    padding: 5px;
-    vertical-align: middle;
-    text-decoration: none;
-    width: auto;
-    transition: 0.2s;
-    border: none;
-    border-radius: 0px;
-}
-    .navegacion:hover{
-        background-color: transparent;
-        color: var(--seleccion);
-        border-top: 3px solid var(--seleccion);
-        border-bottom: 3px solid var(--seleccion);
-    }
-
-.activo{
-    background-color: var(--seleccion);
-    color: var(--texto_oscuro);
-    border-radius: 3px;
-    transition: 0.2s;
-}
-.enlace{
-    background-color: transparent;
-    color: var(--texto_oscuro);
-    text-decoration: none;
-    display: block;
-    padding: 2px 0px 3px 10px;
-    margin-left: 5px;
-    border-left: 4px solid var(--fondo);
-    border-radius: 0;
-}
-    .enlace:hover{
-        background-color: var(--seleccion);
-        color: var(--texto_oscuro);
-        border-left: 4px solid var(--principal);
-        font-weight: bold;
-        border-radius: 0px 30px 30px 0px;
-    }
-
-.enlace_secundario{
-    background-color: transparent;
-    color: var(--texto_oscuro);
-    text-decoration: none;
-    font-style: italic;
-    font-weight: bold;
-}
-    .enlace_secundario:hover{
-        background-color: var(--seleccion);
-        border-radius: 3px;
-    }
-
-
-.info_importante{
-    background-color: var(--seleccion);
-    font-style: italic;
-}
-
-.nuevo::after{
-    content: "nuevo";
+.article__enlace--nuevo::after{
+    content: "Nuevo";
     font-size: smaller;
     color: var(--texto_claro);
     background-color: var(--principal);
-    box-shadow: var(--principal) 1px 1px 3px;
     margin: 0px 10px;
-    padding: 0px 5px 2px 5px;
-    border-radius: 3px;
+    padding: 5px 20px;
+    border-radius: var(--radio);
 }
-.proximo::after{
-    content: "próximamente";
+.article__enlace--proximo::after{
+    content: "Próximamente";
     font-size: smaller;
-    color: var(--texto_oscuro);
-    background-color: var(--texto_claro);
-    box-shadow: var(--principal) 1px 1px 3px;
+    color: var(--texto_claro);
+    background-color: var(--secundario);
     margin: 0px 10px;
-    padding: 0px 5px 2px 5px;
-    border-radius: 3px;
+    padding: 5px 10px;
+    border-radius: var(--radio);
 }
-.exclusivo:hover::after{
-    content: "acceso restringido";
-    /*font-size: smaller;*/
-    color: var(--texto_oscuro);
-    background-color: var(--texto_claro);
-    box-shadow: var(--texto_oscuro) 1px 1px 3px;
+.article__enlace--exclusivo:hover::after{
+    content: "Acceso controlado";
+    font-size: small;
+    font-style: italic;
+    color: var(--texto_claro);
+    background-color: var(--secundario);
     margin: 0px 10px;
-    padding: 0px 5px 2px 5px;
-    border-radius: 3px;
+    padding: 5px 20px;
+    border-radius: var(--radio);
+}
+.article__enlace--actualizado::after{
+    content: "Actualizado";
+    font-size: smaller;
+    font-weight: bold;
+    color: var(--texto_claro);
+    background-color: var(--acento);
+    margin: 0px 10px;
+    padding: 5px 20px;
+    border-radius: var(--radio);
 }
